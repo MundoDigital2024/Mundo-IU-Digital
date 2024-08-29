@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi blog IU</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px 20px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .content {
+            padding: 20px;
+            display: none;
+        }
+        #inicioContent {
+            display: block;
+        }
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+        .dropdown .dropbtn {
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 20px;
+            background-color: inherit;
+            font-family: inherit;
+            margin: 0;
+        }
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+    
+        .TituloCentral {
+            color: rgb(219, 221, 226);
+        }
+        body {
+    background-color: rgb(105, 140, 183);
+}
+.Subtitulos {
+            color: rgb(219, 221, 226);
+        }
+
+        
+    </style>
+</head>
+<body>
+
+    <!-- Menú de navegación -->
+    <nav>
+        <a href="#" onclick="showContent('inicioContent')">Inicio</a>
+        <div class="dropdown">
+            <button class="dropbtn">Entradas 
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#" onclick="showContent('hardwareContent')">Hardware</a>
+                <!-- <a href="#" onclick="showContent('hardwareContent2')">Quien Soy</a> -->
+                
+                </div>
+        
+        </div>
+    </nav>
+
+    <!-- Contenido de Inicio -->
+    <div id="inicioContent" class="content">
+       <center> <h1 class="TituloCentral" >Mi Primer Blog En la IU Digital</h1></center>
+      <center> <img src="img/Estudio.png" alt="Estudiante desarrollando" style="width:250px;height:auto;"></center>
+       <h2 class="Subtitulos">Bienvenidos a mi Blog</h2>
+        <p>Hola, soy Jeferson Cataño, estudiante de primer semestre de Ingeniería de Software y Datos
+             en la Universidad IU Digital de Antioquia. Este blog es un proyecto personal que he decidido desarrollar
+              en el marco de la asignatura Introducción a la Ingeniería de  Software y Datos.</p>
+              <h2 class="Subtitulos">¿Qué encontrarán en este blog?</h2>
+              <p>A lo largo de este semestre, iré compartiendo mis experiencias, aprendizajes,
+                 y reflexiones mientras avanzo en mi formación como ingeniero. Aquí podrán encontrar:</p>
+                 <li> publicación de entradas</li>
+                 <li> Proyectos prácticos en los que aplicaré los conocimientos adquiridos</li>
+                 <li> Retos y soluciones que enfrentaré durante el desarrollo de la asignatura.</li>
+                 <li> Requerimientos de la asignatura </li>
+
+                 <h2 class="Subtitulos">Objetivo del blog:</h2>
+                 <p>Mi objetivo principal con este blog es documentar mi proceso de aprendizaje,
+                     así como servir de recurso para otros estudiantes que estén interesados en el 
+                     campo de la Ingeniería de Software y Datos. Además, quiero utilizar este espacio 
+                     para plasmar mi crecimiento académico y profesional, de manera que al final del semestre,
+                      pueda tener un registro claro de mi evolución.</p>
+                      <p>Los invito a seguirme en este viaje de descubrimiento y aprendizaje. Estoy seguro de que
+                         será una experiencia enriquecedora, llena de desafíos y logros que me acercarán cada vez más
+                          a mi meta de convertirme en un ingeniero competente y apasionado.</p>
+                          <p>¡Gracias por acompañarme!</p>
+            
+    
+    </div>
+
+    <!-- Contenido de Hardware -->
+    <div id="hardwareContent" class="content">
+      <center>  <h1 class="Subtitulos">Información sobre el Hardware</h1></center>
+
+    <p>El hardware es uno de los componentes fundamentales en el mundo de la
+         informática y la tecnología. Se refiere a todos los elementos físicos 
+         que componen un sistema informático.</p>
+
+    <h2  class="Subtitulos">¿Qué es el Hardware?</h2>
+    <p>El hardware es el conjunto de componentes físicos que forman parte de un 
+        sistema informático. Estos componentes incluyen todas las partes tangibles 
+        que puedes tocar, como la unidad central de procesamiento (CPU), la memoria, 
+        los dispositivos de almacenamiento, los periféricos y otros dispositivos electrónicos.</p>
+
+        
+    <h2  class="Subtitulos">Tipos de Hardware</h2>
+    <center> <img src="img/Hardwaree.webp" alt="Estudiante desarrollando" style="width:400px;height: 300px;"></center>
+    <h3 class="Subtitulos">1. Hardware Básico</h3>
+    <ul>
+        <li><strong>Procesador (CPU):</strong> Es el cerebro del ordenador, 
+            encargado de ejecutar las instrucciones de los programas.</li>
+        <li><strong>Memoria RAM:</strong> Es la memoria de acceso aleatorio 
+            donde se almacenan temporalmente los datos que el procesador necesita acceder rápidamente.</li>
+        <li><strong>Placa Base (Motherboard):</strong> Es la tarjeta principal del
+             sistema que conecta todos los componentes entre sí.</li>
+        <li><strong>Disco Duro (HDD/SSD):</strong> Es el dispositivo de almacenamiento donde se guardan los datos
+             de forma permanente.</li>
+        <li><strong>Fuente de Alimentación:</strong> Proporciona la energía necesaria a todos los componentes del sistema.</li>
+    </ul>
+
+    <h3  class="Subtitulos" >2. Hardware Periférico</h3>
+    <ul>
+        <li><strong>Teclado y Ratón:</strong> Dispositivos de entrada que permiten la interacción con el ordenador.</li>
+        <li><strong>Monitor:</strong> Dispositivo de salida que muestra la información visual al usuario.</li>
+        <li><strong>Impresora:</strong> Dispositivo de salida que permite imprimir documentos físicos.</li>
+        <li><strong>Altavoces y Micrófono:</strong> Dispositivos de entrada y salida de audio.</li>
+    </ul>
+
+    <h3  class="Subtitulos">3. Hardware de Almacenamiento</h3>
+    <ul>
+        <li><strong>Unidades de Estado Sólido (SSD):</strong> Dispositivos de almacenamiento más rápidos
+             y duraderos que los discos duros tradicionales.</li>
+        <li><strong>Discos Duros (HDD):</strong> Dispositivos de almacenamiento 
+            que usan platos magnéticos para guardar datos.</li>
+        <li><strong>Unidades Flash (USB):</strong> Dispositivos portátiles para almacenar y transferir datos.</li>
+    </ul>
+
+    <h3  class="Subtitulos">4. Hardware de Red</h3>
+    <ul>
+        <li><strong>Tarjeta de Red:</strong> Componente que permite la conexión de un ordenador a una red.</li>
+        <li><strong>Router:</strong> Dispositivo que dirige el tráfico de datos entre redes, como Internet y una red local.</li>
+        <li><strong>Switch:</strong> Dispositivo que conecta varios dispositivos dentro de una misma red.</li>
+    </ul>
+
+    <h2 class="Subtitulos">Evolución del Hardware</h2>
+    <center> <img src="img/ae8c2a21-d121-46c8-81d8-32c34ecf82a0.webp" alt="Estudiante desarrollando" style="width:400px;height: 300px;"></center>
+    <p>El hardware ha evolucionado rápidamente en las últimas décadas, con mejoras significativas en la velocidad, 
+        capacidad y eficiencia energética. Los procesadores son cada vez más potentes, los dispositivos de almacenamiento 
+        más rápidos y compactos, y los periféricos más inteligentes y conectados.</p>
+
+    <h2  class="Subtitulos">Importancia del Hardware</h2>
+    <center> <img src="img/Impo.webp" alt="Estudiante desarrollando" style="width:400px;height: 300px;"></center>
+    <p>El hardware es esencial para el funcionamiento de cualquier sistema informático. Sin él,
+         no sería posible ejecutar software, procesar información ni interactuar con dispositivos digitales.
+          Además, la calidad y capacidad del hardware determinan en gran medida el rendimiento de un sistema y su 
+          capacidad para manejar tareas complejas.</p>
+
+    <h2 class="Subtitulos">Tendencias Actuales en Hardware</h2>
+    <ul>
+        <li><strong>Computación en la Nube:</strong> Mucho del procesamiento y almacenamiento de datos se está moviendo a 
+            la nube, reduciendo la necesidad de hardware potente en dispositivos individuales.</li>
+        <li><strong>Internet de las Cosas (IoT):</strong> La proliferación de dispositivos conectados está 
+            impulsando el desarrollo de hardware más pequeño y eficiente.</li>
+        <li><strong>Inteligencia Artificial:</strong> Los avances en IA están llevando a la creación de 
+            hardware especializado, como las unidades de procesamiento tensorial (TPU).</li>
+    </ul>
+
+    <h2  class="Subtitulos" >Conclusión</h2>
+    <p>El hardware es una parte crucial de la tecnología moderna, y su desarrollo continuo es clave
+         para la innovación en todos los campos de la informática. Desde el ordenador personal hasta 
+         los servidores en la nube, el hardware sigue siendo el pilar sobre el que se construyen los avances tecnológicos.</p>
+    </div>
+   <!-- <div id="hardwareContent2" class="content">
+        <h1>Wau</h1>
+        <p>Hola.</p> -->
+    </div>
+
+    <!-- Script para manejar la visualización de contenido -->
+    <script>
+        function showContent(contentId) {
+            // Ocultar todos los elementos de contenido
+            var contents = document.querySelectorAll('.content');
+            contents.forEach(function(content) {
+                content.style.display = 'none';
+            });
+
+            // Mostrar el contenido seleccionado
+            var selectedContent = document.getElementById(contentId);
+            selectedContent.style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
