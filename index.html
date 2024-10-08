@@ -80,8 +80,26 @@
 .Subtitulos {
             color: rgb(219, 221, 226);
         }
-
-        
+        .TituloGit {
+            color: rgb(232, 163, 25);
+        }
+        .code-container pre {
+            margin: 0;
+        }
+        .copy-button:hover {
+            background-color: #555;
+        }
+        .code-container {
+            background-color: #1e1e1e;
+            border-radius: 5px;
+            padding: 20px;
+            margin: 20px;
+            position: relative;
+            display: inline-block;
+            color: #fff;
+            font-family: 'Courier New', Courier, monospace;
+        }
+       
     </style>
 </head>
 <body>
@@ -95,6 +113,7 @@
             </button>
             <div class="dropdown-content">
                 <a href="#" onclick="showContent('hardwareContent')">Hardware</a>
+                <a href="#" onclick="showContent('GithubContent')">Como Utilizar Git</a>
                 <!-- <a href="#" onclick="showContent('hardwareContent2')">Quien Soy</a> -->
                 
                 </div>
@@ -219,6 +238,249 @@
         <p>Hola.</p> -->
     </div>
 
+</div>
+
+<!-- Contenido de Github -->
+<div id="GithubContent" class="content">
+ <center><h1 class=" TituloGit">Fundamentos de Git: Desde la Inicialización Local hasta la Colaboración en Repositorios Remotos</h1></center>
+ <p>En el mundo del desarrollo de software, el manejo eficiente del control de versiones es esencial para colaborar y mantener un proyecto de manera
+     organizada. Git, una de las herramientas más populares para este fin, nos permite gestionar cambios en nuestro código de forma efectiva. En esta ocasión, 
+     exploraremos algunos de los aspectos clave para trabajar con Git, desde la inicialización de un repositorio local, hasta la creación de branches y la conexión 
+     con repositorios remotos.
+
+        Primero, veremos cómo crear un repositorio local, que es el primer paso para comenzar a controlar nuestro código. Luego, hablaremos sobre la creación de ramas o 'branches',
+         que son fundamentales para trabajar en nuevas funcionalidades o correcciones sin afectar el código principal. Finalmente, aprenderemos a conectar nuestro repositorio local a uno remoto en plataformas
+          como GitHub, lo que nos permitirá colaborar con otros desarrolladores y mantener nuestro código sincronizado en la nube.
+        
+        Cada uno de estos pasos se complementa con comandos prácticos que nos ayudarán a entender no solo cómo hacerlo, sino también el propósito detrás de cada acción en el flujo de trabajo con Git.:</p> 
+       <center> <h2 class="TituloGit">Inicialización del repositorio localmente</h2></center>
+<p>La inicialización de un repositorio local es el primer paso para comenzar a trabajar con Git en un proyecto. Este proceso crea una estructura de directorios oculta (llamada .git) en el proyecto, la cual Git utilizará para rastrear los cambios.
+ 
+A continuación, te explico el proceso con detalle, y cómo puedes usar etiquetas HTML, por ejemplo, un div para explicar los comandos relevantes:
+ 
+
+</p>
+
+<h2 class=" TituloGit">Pasos para inicializar un repositorio local en Git:
+ 
+</h2>
+
+<h3 class="Subtitulos"> 1. Crea o navega al directorio de tu proyecto. </h3>
+   <p>Si ya tienes un proyecto, simplemente navega hasta el directorio usando la terminal o línea de comandos:</p>
+   
+
+   <div class="code-container">
+    <button class="copy-button" onclick="copyCode(1)">Copiar código</button>
+    <pre><code id="code1">cd /ruta/de/tu/proyecto</code></pre>
+</div>
+        
+<h3 class="Subtitulos"> Inicializa el repositorio de Git.</h3>
+ 
+   <p>Ejecuta el siguiente comando en la terminal para inicializar un nuevo repositorio
+     de Git en el directorio:</p>
+
+  
+    
+    <!-- Segundo fragmento de código -->
+    <div class="code-container">
+        <button class="copy-button" onclick="copyCode(2)">Copiar código</button>
+        <pre><code id="code2">git init</code></pre>
+    </div>
+
+    <p>Este comando crea una carpeta oculta llamada .git en el directorio de tu proyecto. Esa carpeta contiene 
+        todos los archivos y la información que Git necesita para gestionar el repositorio.</p>
+
+        <h3 class="Subtitulos"> 3. Añade archivos al repositorio.</h3>
+        <p>Una vez inicializado el repositorio, puedes agregar archivos para que Git comience a rastrearlos. 
+            Utiliza el comando git add para agregar archivos:</p>
+
+            <div class="code-container">
+                <button class="copy-button" onclick="copyCode(3)">Copiar código</button>
+                <pre><code id="code3">git add .</code></pre>
+            </div>
+
+            <p>El punto (.) indica que quieres agregar todos los archivos en el directorio actual al área de preparación (staging area).
+            </p>
+
+            <h3 class="Subtitulos"> 4. Realiza un commit inicial. </h3>
+            <p> Una vez que los archivos están en el área de preparación,
+                puedes confirmar los cambios con un commit:</p>
+
+                <div class="code-container">
+                    <button class="copy-button" onclick="copyCode(4)">Copiar código</button>
+                    <pre><code id="code4">git commit -m "Primer commit"</code></pre>
+                </div>
+
+                <center> <h2 class="TituloGit">Creación de branches</h2></center>
+
+                <p class="Subtitulos">Las ramas (branches) en Git: Qué son y cómo utilizarlas correctamente</p>
+                <p>En el desarrollo de software, es muy común que trabajemos en diferentes funcionalidades, correcciones o mejoras al mismo tiempo, sin querer afectar el código principal de nuestro 
+                    proyecto. Aquí es donde las ramas, o branches, en Git juegan un papel crucial</p>
+
+                    <p class="Subtitulos">¿Qué es una rama (branch)?</p>
+                    <p>Una rama o branch es una versión del código del proyecto sobre el que estás trabajando. Estas ramas ayudan a mantener el orden en el control de versiones y manipular el código de forma segura.
+
+                        En otras palabras, un branch o rama en Git es una rama que proviene de otra. Imagina un árbol, que tiene una rama gruesa, y otra más fina, en la rama más gruesa tenemos los commits principales y 
+                        en la rama fina tenemos otros commits que pueden ser de hotfix, devlopment entre otros.</p>
+
+                        <center> <img src="img/Screenshot_2.png" alt="Creación de branches" style="width:400px;height: 300px;"></center>
+
+                <p class="Subtitulos">Clases de branches o ramas en Git</p>   
+                            <ul>
+                    <li ><strong class="Subtitulos">Rama main (Master):</strong> Por defecto, el proyecto se crea en una rama llamada Main (anteriormente conocida como Master). Cada vez que añades código y guardas los cambios, estás haciendo un commit, que es añadir el nuevo código a una rama.
+                         Esto genera nuevas versiones de esta rama o branch, hasta llegar a la versión actual de la rama Main.</li>
+                    <li><strong class="Subtitulos">2. Rama development</strong> Cuando decides hacer experimentos, puedes generar ramas experimentales (usualmente llamadas development), que están basadas en alguna rama main, pero sobre las cuales puedes hacer cambios a tu gusto sin necesidad
+                         de afectar directamente al código principal.</li>
+                    <li><strong class="Subtitulos" >3. Rama hotfix:</strong> En otros casos, si encuentras un bug o error de código en la rama Main (que afecta al proyecto en producción), tendrás que crear una nueva rama (que usualmente se llaman bug fixing o hot fix) para hacer los arreglos necesarios. Cuando los cambios estén listos, los tendrás que fusionar con la rama Main para que los cambios sean aplicados. Para esto, se usa un comando llamado Merge, que mezcla los cambios de la rama que originaste a la rama Main.
+
+                        Todos los commits se aplican sobre una rama. Por defecto, siempre empezamos en la rama Main (pero puedes cambiarle el nombre si no te gusta) y generamos nuevas ramas, a partir de esta, para crear flujos de trabajo independientes.</li>
+                </ul>
+
+                <h2 class="TituloGit">Cómo crear una rama en Git</h2>
+                <p>El comando git branch permite crear una rama nueva. Si quieres empezar a trabajar en una nueva función, puedes crear una rama nueva a partir de la rama master con git branch new_branch. Una vez creada, puedes usar git checkout new_branch para cambiar a esa rama.
+
+                    Recuerda que todas tus versiones salen de la rama principal o Master y de allí puedes tomar una versión específica para crear otra rama de versiones.</p>
+            
+                <p> Vamos a seguir el siguiente ejemplo:</p>
+
+               <p class="TituloCentral">Para crear una nueva rama, utiliza el comando:</p>
+
+               <div class="code-container">
+                <button class="copy-button" onclick="copyCode(5)">Copiar código</button>
+                <pre><code id="code5">git branch nombre-de-la-rama"</code></pre>
+            </div>
+
+            <p>Esto simplemente crea una rama nueva, pero no cambia tu trabajo actual a esa rama.
+                 Imagina que creaste una rama llamada feature-nueva.</p>
+
+                 <h2 class="Subtitulos">Cambiarse a la nueva rama</h2>
+                 <p>Para empezar a trabajar en la nueva rama, debes "moverte" a ella con el siguiente comando:</p>
+                 <div class="code-container">
+                    <button class="copy-button" onclick="copyCode(6)">Copiar código</button>
+                    <pre><code id="code6">git checkout nombre-de-la-rama"</code></pre>
+
+                </div>
+
+                <p>O también puedes crear y moverte a la nueva rama en un solo paso con:</p>
+                <div class="code-container">
+                    <button class="copy-button" onclick="copyCode(7)">Copiar código</button>
+                    <pre><code id="code7">git checkout -b nombre-de-la-rama"</code></pre>
+                </div>
+                <p>Siguiendo con nuestro ejemplo, usarías:</p>
+
+                <div class="code-container">
+                    <button class="copy-button" onclick="copyCode(8)">Copiar código</button>
+                    <pre><code id="code8">git checkout nombre-de-la-rama"</code></pre>
+
+                </div>
+<p>Con este comando, has creado la rama y ahora estás listo para trabajar en feature-nueva.</p>
+<h3 class="Subtitulos">Realiza tus cambios y confirma (commit)</h3>
+<p>Una vez en la nueva rama, puedes empezar a hacer tus cambios, agregar archivos y hacer commits de manera normal:</p>
+
+<div class="code-container">
+    <button class="copy-button" onclick="copyCode(9)">Copiar código </button>
+    <pre><code id="code9">git add archivo-modificado
+        git commit -m "Mensaje describiendo los cambios"</code></pre>
+
+</div>          
+
+<h3 class="Subtitulos">Fusionar ramas (merge)</h3>
+<p>Cuando hayas terminado de trabajar en tu nueva funcionalidad o corrección, lo más común es fusionar (merge) los cambios de tu rama con la rama principal (main o master).
+     Para ello, primero asegúrate de estar en la rama principal:</p>
+
+<div class="code-container">
+    <button class="copy-button" onclick="copyCode(10)">Copiar código</button>
+    <pre><code id="code10">git checkout main"</code></pre>
+
+</div> 
+<p>Luego, puedes fusionar los cambios de la rama feature-nueva con el siguiente comando:</p>
+<div class="code-container">
+    <button class="copy-button" onclick="copyCode(11)">Copiar código</button>
+    <pre><code id="code11">git merge feature-nueva"</code></pre>
+ </div> 
+ <p>Si todo va bien, tus cambios se integrarán en la rama principal.</p>
+
+   
+ <li><strong class="Subtitulos">Ejemplo práctico:</strong> Imagina que estás desarrollando una 
+    nueva funcionalidad en tu aplicación, pero no quieres afectar la versión estable de tu proyecto
+     que está en la rama principal (main). Sigues estos pasos:</li>
+     <h2 class="TituloGit">  1. Creas una nueva rama nueva-funcionalidad:</h2>
+    <div class="code-container">
+        <button class="copy-button" onclick="copyCode(12)">Copiar código</button>
+        <pre><code id="code12">git checkout -b nueva-funcionalidad</code></pre>
+     </div> 
+     <h3 class="Subtitulos">  2. los cambios en tu código, los confirmas y sigues trabajando.</h3>
+     <h3 class="Subtitulos">  3. Cuando la nueva funcionalidad está lista, cambias a la rama principal:</h3>
+     <div class="code-container">
+        <button class="copy-button" onclick="copyCode(13)">Copiar código</button>
+        <pre><code id="code13">git checkout main</code></pre>
+     </div> 
+   
+     <h3 class="Subtitulos">  4. Fusionas la nueva funcionalidad:
+     </h3>
+
+     <div class="code-container">
+        <button class="copy-button" onclick="copyCode(14)">Copiar código</button>
+        <pre><code id="code14">git checkout main</code></pre>
+     </div> 
+   <P>Y listo, tu nueva funcionalidad está ahora en la versión principal del proyecto sin 
+    haber interferido con el trabajo anterio</P>
+
+    <h2 class="TituloGit" >Conclusión</h2>
+    <p>Las ramas en Git son una herramienta poderosa para mantener el orden y la seguridad en tu proyecto, permitiéndote trabajar en varias cosas a la vez sin correr el riesgo de dañar el código que ya funciona. Usar ramas correctamente facilita la colaboración y asegura que las nuevas características o correcciones estén bien
+         probadas antes de integrarse en la versión principal del proyecto.</p>
+   
+<center><h1 class="TituloGit">Conectar un Repositorio Local con un Repositorio Remoto: Instrucciones Paso a Paso</h1></center>
+
+<p>Cuando trabajas con Git, una de las tareas más comunes es sincronizar tu trabajo local con un repositorio remoto, como los que se alojan en plataformas como GitHub, GitLab o Bitbucket. Esta conexión te permite almacenar tu código en la nube, colaborar con otros desarrolladores y hacer un seguimiento 
+    de los cambios de manera centralizada.</p>
+
+    <h4 class="Subtitulos">¿Qué es un repositorio remoto?</h4>
+    <p>Un repositorio remoto es simplemente una copia de tu repositorio local que se aloja en un servidor externo, como GitHub. Este repositorio remoto te permite acceder a tu código desde 
+        cualquier lugar y compartirlo con otros colaboradores.</p>
+
+        <h4 class="Subtitulos">¿Por qué es importante conectar el repositorio local con uno remoto?</h4>
+
+        <ul>
+            <li ><strong class="Subtitulos">Colaboración:</strong> Permite que varios desarrolladores trabajen juntos, ya que pueden clonar el repositorio remoto y hacer cambios desde sus propios dispositivos.</li>
+            <li><strong class="Subtitulos">Copia de seguridad: </strong> Tener el código en la nube asegura que no lo pierdas si algo le pasa a tu máquina local.</li>
+            <li><strong class="Subtitulos" >Despliegue: </strong> Muchos entornos de producción o servidores obtienen el código directamente desde repositorios remotos para desplegar las aplicaciones.</li>
+        </ul>
+
+        <h4 class="Subtitulos"> Cómo conectar un repositorio local con uno remoto</h4>
+        <p>Ahora vamos a ver los pasos para conectar un repositorio local a uno remoto en GitHub. Asegúrate de haber creado un repositorio local en tu máquina y un
+             repositorio vacío en GitHub.</p>
+
+             <h4 class="Subtitulos">1.Inicializar tu repositorio local (si aún no lo has hecho) </h4>
+
+<p>Si aún no has inicializado tu repositorio local, puedes hacerlo con:</p>
+
+<div class="code-container">
+    <button class="copy-button" onclick="copyCode(15)">Copiar código</button>
+    <pre><code id="code15">git init</code></pre>
+ </div> 
+<p>Este comando crea un nuevo repositorio local en la carpeta donde estás trabajando.</p>
+
+<h4 class="Subtitulos">2. Agregar el repositorio remoto</h4>
+<p>Una vez que tienes tu repositorio local, necesitas vincularlo con el repositorio remoto. El comando para hacer esto es git remote add. Vamos a suponer que ya creaste un repositorio vacío en GitHub llamado mi-proyecto. Para 
+    agregar este repositorio remoto, usarías el siguiente comando:</p>
+
+    <div class="code-container">
+        <button class="copy-button" onclick="copyCode(16)">Copiar código</button>
+        <pre><code id="code16">git remote add origin https://github.com/tu-usuario/mi-proyecto.git
+        </code></pre>
+     </div>
+
+<h5>Aquí</h5>
+<ul>
+    <li ><strong class="Subtitulos">origin:</strong> Es el nombre por defecto que Git le da a la conexión remota. Puedes llamarlo como quieras, pero "origin" es lo más común.</li>
+    <li><strong class="Subtitulos">URL del repositorio: </strong> Es la dirección del repositorio remoto en GitHub.</li>
+   
+</ul>
+<p>Este comando le dice a Git que tu repositorio local está vinculado a ese repositorio remoto.</p>
+
+
+    </div>
     <!-- Script para manejar la visualización de contenido -->
     <script>
         function showContent(contentId) {
@@ -232,6 +494,14 @@
             var selectedContent = document.getElementById(contentId);
             selectedContent.style.display = 'block';
         }
+        function copyCode(codeNumber) {
+        const code = document.querySelector(`#code${codeNumber}`).textContent;
+        navigator.clipboard.writeText(code).then(() => {
+            alert("Código copiado al portapapeles");
+        }).catch(err => {
+            console.error('Error al copiar el código: ', err);
+        });
+    }
     </script>
 
 </body>
